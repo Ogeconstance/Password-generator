@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pretty Password Generator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Password Generator</h1>
+
+    <div class="password-display" id="passwordDisplay">
+      <span id="generatedPassword"></span>
+      
+    </div>
+
+    <div class="length-section">
+      <label for="length">Length: <span id="lengthValue"></span></label>
+      <input type="range" id="length" min="8" max="32">
+      <div class="range-labels"><span>8</span><span>32</span></div>
+    </div>
+
+    <div class="settings">
+      <h2>Settings</h2>
+
+      <div class="setting">
+        <span>Include Uppercase</span>
+        <label class="switch">
+          <input type="checkbox" id="uppercase">
+          <span class="slider"></span>
+        </label>
+      </div>
+
+      <div class="setting">
+        <span>Include Lowercase</span>
+        <label class="switch">
+          <input type="checkbox" id="lowercase">
+          <span class="slider"></span>
+        </label>
+      </div>
+
+      <div class="setting">
+        <span>Include Numbers</span>
+        <label class="switch">
+          <input type="checkbox" id="numbers">
+          <span class="slider"></span>
+        </label>
+      </div>
+
+      <div class="setting">
+        <span>Include Symbols</span>
+        <label class="switch">
+          <input type="checkbox" id="symbols">
+          <span class="slider"></span>
+        </label>
+      </div>
+    </div>
+
+    <button id="generateBtn">Generate Password</button>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>

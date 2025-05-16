@@ -1,0 +1,194 @@
+/* Global styles */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #ad70ff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+  }
+  
+  /* Card container */
+  .container {
+    background-color: linear-gradient(to right, #7b5bfc, #ad70ff);
+    color: #fff;
+    padding: 30px;
+    border-radius: 20px;
+    max-width: 400px;
+    width: 100%;
+    box-shadow: 0 0 20px rgba(0,0,0,0.3);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background: linear-gradient(to right, #7b5bfc, #ad70ff);
+  }
+  
+  /* Title */
+  h1 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  /* Password Display Box */
+  .password-display {
+    background-color: #2a2a4e;
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 18px;
+    word-break: break-all;
+    position: relative;
+    text-align: center;
+    cursor: text;
+  }
+  
+  .copy-hint {
+    font-size: 12px;
+    color: #aaa;
+    margin-top: 5px;
+  }
+  
+  /* Range Slider Section */
+  .length-section label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  #length {
+    width: 100%;
+    margin: 5px 0;
+    cursor: pointer;
+    
+  }
+  
+  .range-labels {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    color: #ccc;
+    
+  }
+  
+  /* Settings Section */
+  .settings h2 {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+  
+  .setting {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #2a2a4e;
+    padding: 10px 15px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+  }
+  
+  /* Switch styling */
+  .switch {
+    position: relative;
+    display: inline-block;
+    width: 44px;
+    height: 24px;
+  }
+  
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .slider {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: #555;
+    border-radius: 34px;
+    transition: .4s;
+    cursor: pointer;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    border-radius: 50%;
+    transition: .4s;
+  }
+  
+  .switch input:checked + .slider {
+    background-color: #7b5bfc ;
+  }
+  
+  .switch input:checked + .slider:before {
+    transform: translateX(20px);
+  }
+  
+  /* Generate Button */
+  #generateBtn {
+    background: linear-gradient(to right, #7b5bfc, #ad70ee);
+    color: white;
+    border: none;
+    box-shadow: 0 0 20px rgba(0,0,0,0.3); 
+    padding: 12px;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  #generateBtn:hover {
+    background: linear-gradient(to right, #6a4de1, #a35dff);
+  }
+
+  /* Responsive Design */
+@media (max-width: 480px) {
+    .container {
+      padding: 20px;
+      max-width: 90%;
+      gap: 15px;
+    }
+  
+    h1 {
+      font-size: 20px;
+    }
+  
+    .password-display {
+      font-size: 16px;
+      padding: 12px;
+    }
+  
+    .setting {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+    }
+  
+    .switch {
+      align-self: flex-end;
+    }
+  
+    #generateBtn {
+      font-size: 14px;
+      padding: 10px;
+    }
+  
+    .range-labels {
+      font-size: 10px;
+    }
+  
+    .length-section label {
+      font-size: 14px;
+    }
+  
+    .settings h2 {
+      font-size: 13px;
+    }
+  }
+  
